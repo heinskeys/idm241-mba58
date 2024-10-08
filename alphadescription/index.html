@@ -19,9 +19,12 @@
         <div class="categoryStyle">
             <h3>Triggers</h3>
             <ul>
-                <li>Hover ON</li>
-                <li>Hover OFF</li>
-                <li>On Click</li>
+                <li>Add to Cart Button (Wishlist)</li>
+                <ul>
+                    <li>Hover ON</li>
+                    <li>Hover OFF</li>
+                    <li>On Click</li>
+                </ul>
             </ul>
         </div>
         <div class="categoryStyle">
@@ -29,14 +32,14 @@
             <ul>
                 <li>Hover ON</li>
                     <ul>
-                        <li>Cursor changes to finger</li>
-                        <li>Button opacity increases to 100%</li>
+                        <li>Cursor changes to pointer</li>
+                        <li>"Add to Cart" button opacity increases to 100%</li>
                         <li>Rank/order input field becomes editable</li>
                         <li>Rank/order input field background changes to #313c48 with semi-transparent shadow</li>
                     </ul>
                 <li>Hover OFF</li>
                     <ul>
-                        <li>Cursor changes back into pointer</li>
+                        <li>Cursor changes back into arrow</li>
                         <li>Button opacity decreases back to 75%</li>
                         <li>Rank/order input field cannot be edited (default)</li>
                         <li>Rank/order input field background changes to rgba(64, 81, 99, 0.9) with no shadow (default)</li>
@@ -47,7 +50,8 @@
                         <li>"Added to your cart!" confirmation modal appears</li>
                         <li>Rank/order input field cannot be edited (default)</li>
                         <li>Rank/order input field background changes to rgba(64, 81, 99, 0.9) with no shadow (default)</li>
-                        <li>Database user cart boolean set to TRUE</li>
+                        <li>Set the user's cart flag to TRUE in the database</li>
+                        <li>Update the user's cart item count to 1 in the database</li>
                     </ul>
             </ul>
         </div>
@@ -86,7 +90,7 @@
                 </ul>
                 <li>Modes</li>
                 <ul>
-                    <li>If "Add to Cart" is clicked: An overlay background appears at 85% opacity. "Added to your cart!" confirmation modal appears</li>
+                    <li>If "Add to Cart" is clicked: "Added to your cart!" confirmation modal appears</li>
                 </ul>
             </ul>
         </div>
