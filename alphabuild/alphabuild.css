@@ -1,0 +1,120 @@
+body {
+    background: linear-gradient(to bottom, #171d25, #1b2838 100%);
+    height: 100%;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+    margin: 25px;
+}
+
+header img {
+    height: 115px; 
+    margin-right: 10px;
+}
+
+/* FONTS / TEXT STYLING*/
+
+h1 {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+h2 {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    font-size: 100%;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #1982d0;
+}
+
+h3 {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    padding: 12px; 
+    background: linear-gradient(to bottom, #22394b, #22394b71 100%);
+}
+
+li {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    line-height: 2ch;
+}
+
+ul {
+    padding-left: 40px;
+    padding-right: 30px;
+}
+
+button {
+    font-family: motiva-sans, sans-serif;
+    text-shadow: 1px 1px 0px rgba( 0, 0, 0, 0.3 );
+    font-weight: 200;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
+}
+
+/* CLASS STYLING*/
+
+.wishlistItem {
+    display: flex;
+    justify-content: center;
+    margin: 25px 275px;
+    background-color: rgba(64, 81, 99, 0.9);
+}
+
+.addButton {
+    background: linear-gradient(to right,#75b022 5%, #588a1b 95%);
+    border-radius: 2.5px;
+    padding: 15px 30px;
+    border: 0;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.75;
+}
+
+.addButton:hover {
+    background: linear-gradient( to right, #8ed629 10%, #6aa621 90%);
+    opacity: 1;
+}
+
+.mainContent { 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.categoryStyle {
+    flex: 1 1 200px; 
+    margin: 10px; 
+    padding: 0;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #29465d;
+}
