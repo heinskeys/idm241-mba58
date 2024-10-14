@@ -14,13 +14,66 @@
     </header>
 
     <div class="wishlistItem">
-        <div class="imageContainer">
-            <img src="" alt="">
-        </div>
         <div>
-            <h4>The Path</h4>
+            <div>
+                <img src="https://store.steamstatic.com/public/images/v6/wishlist/handle.png" alt="">
+            </div>
+            <input class="orderInput" type="text" value="0">
         </div>
-        <button class="addButton"> Add to Cart</button>
+        <div class="imageContainer">
+            <img src="https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/27000/header_292x136.jpg?t=1667032931" alt="">
+        </div>
+        <div class="gameContent">
+            <div class="topContent">
+                <h4>The Path</h4>
+            </div>
+            <div class="centerContent">
+                <div class="gameInfo">
+                    <p class="statNormal">Overall Reviews:</p>
+                    <p class="statEmphasis">Mostly Positive</p>
+                    <p class="statNormal">Release Date:</p>
+                    <p class="statNormal">Mar 19, 2009</p>
+                </div>
+                <div class="addToCart">
+                    <div class="itemPrice"><p>$9.99</p></div>
+                    <button id="addtocartButton" class="addButton"> Add to Cart</button> <!-- Changed the ID here -->
+                </div>
+                <div id="addedModal" class="addedModal">
+                    <div class="addedModalContent">
+                        <span class="addButtonClose">&times;</span>
+                        <p>Added to Cart</p>
+                    </div>
+                </div>
+            </div>
+            <div class="bottomContent">
+                <div class="platformIcon">
+                    <img src="https://store.steamstatic.com/public/images/v6/icon_platform_win.png?v=3" alt="">
+                    <img src="https://store.steamstatic.com/public/images/v6/icon_platform_mac.png" alt="">
+                </div>
+                <div class="bottomRow">
+                    <div class="tags">
+                        <div class="tag">
+                            Walking Simulator
+                        </div>
+                        <div class="tag">
+                            Indie
+                        </div>
+                        <div class="tag">
+                            Horror
+                        </div>
+                        <div class="tag">
+                            Exploration
+                        </div>
+                        <div class="tag">
+                            Female Protagonist
+                        </div>
+                    </div>
+                    <div class="addDate">
+                        Added on 10/14/2024 ( remove )
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="mainContent">
@@ -103,5 +156,6 @@
             </ul>
         </div>
     </div>
+    <script src="alphabuild.js"></script>
 </body>
 </html>

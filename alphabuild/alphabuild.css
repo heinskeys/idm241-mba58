@@ -58,6 +58,53 @@ h3 {
     background: linear-gradient(to bottom, #22394b, #22394b71 100%);
 }
 
+h4 {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    color: white;
+    margin: 10px 0 15px 0;
+}
+
+p {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    text-transform: uppercase;
+    color: white;
+    margin: 0px;
+}
+
+.statNormal {
+    color: #b2b8bd;
+}
+
+.statEmphasis {
+    color: #66C0F4;
+}
+
+.tag {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 200;
+    font-size: 11px;
+    color: #8f98a0;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 2px;
+    margin: 0px 3px 0px 0px;
+    padding: 2px 5px;
+    height: fit-content;
+}
+
+.addDate {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 200;
+    font-size: 11px;
+    color: #8f98a0;
+    height: fit-content;
+    align-self: end;
+}
+
 li {
     font-family: "motiva-sans", sans-serif;
     font-weight: 400;
@@ -76,23 +123,87 @@ button {
     text-shadow: 1px 1px 0px rgba( 0, 0, 0, 0.3 );
     font-weight: 200;
     font-style: normal;
-    font-size: 1.5rem;
+    font-size: 15px;
     color: white;
+}
+
+.gameInfo {
+    font-family: motiva-sans, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12px;
 }
 
 /* CLASS STYLING*/
 
 .wishlistItem {
     display: flex;
+    width: 940px;
     justify-content: center;
-    margin: 25px 275px;
+    padding: 16px 16px 8px 16px;
+    margin: 16px 200px;
     background-color: rgba(64, 81, 99, 0.9);
+    overflow: hidden;
+
+}
+
+.gameRank {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    width: 50px;
+    height: 100%;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+.orderInput {
+    width: 20px;
+}
+
+.imageContainer {
+    margin-right: 15px;
+}
+
+.gameContent {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.centerContent {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.gameInfo {
+    display: grid;
+    grid-template-columns: 160px auto;
+    grid-template-rows: 18px;
+    flex-grow: 1;
+}
+
+.addToCart {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0,0,0,0.2);
+    height: 36px;
+    padding: 4px;
+}
+
+.itemPrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8px;
+    height: auto;
 }
 
 .addButton {
     background: linear-gradient(to right,#75b022 5%, #588a1b 95%);
     border-radius: 2.5px;
-    padding: 15px 30px;
+    padding: 0px 15px;
     border: 0;
     cursor: pointer;
     transition: background-color 0.3s ease, color 0.3s ease, opacity 0.3s ease;
@@ -102,6 +213,26 @@ button {
 .addButton:hover {
     background: linear-gradient( to right, #8ed629 10%, #6aa621 90%);
     opacity: 1;
+}
+
+.bottomContent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.platformIcon {
+    margin: 0px 0px 10px 0px;
+}
+
+.bottomRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tags {
+    display: flex;
 }
 
 .mainContent { 
@@ -117,4 +248,44 @@ button {
     border-style: solid;
     border-width: 2.5px;
     border-color: #29465d;
+}
+
+/* MODAL */
+
+/* The Modal (background) */
+.addedModal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+  /* Modal Content/Box */
+.addedModalContent {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+}
+
+  /* The Close Button */
+.addButtonClose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.addButtonClose:hover,
+.addButtonClose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
 }
