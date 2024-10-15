@@ -268,11 +268,20 @@ button {
 
 
 .addedModalContent {
+    box-shadow: 0px 8px 38px 5px rgba(0,0,0,.75);
     background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%),#25282e;
     margin: 15% auto; 
     padding: 20px;
     border: 1px solid #888;
     width: 80%; 
+}
+
+.addedModalContent p {
+    font-family: motiva-sans, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 22px;
+    text-transform: none;
 }
 
 .addToCart .addButton span {
