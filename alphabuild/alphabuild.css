@@ -272,8 +272,8 @@ button {
     background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%),#25282e;
     margin: 15% auto; 
     padding: 20px;
-    border: 1px solid #888;
     width: 80%; 
+    position: relative;
 }
 
 .addedModalContent p {
@@ -282,6 +282,17 @@ button {
     font-style: normal;
     font-size: 22px;
     text-transform: none;
+    margin: 10px 0px 25px 0px;
+}
+
+.topBar {
+    position: absolute;
+    height: 1px; /* Increase height to make it more visible */
+    width: 100%; /* Ensure it spans the width of the modal */
+    background: linear-gradient(to right, #00ccff, #3366ff); /* Gradient is already applied */
+    margin-bottom: 10px; /* Add space below the bar if needed */
+    top: 0;
+    left: 0;
 }
 
 .addToCart .addButton span {
@@ -298,6 +309,10 @@ button {
     float: right;
     font-size: 28px;
     font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
 }
 
 .addButtonClose:hover,
