@@ -327,6 +327,7 @@ button {
 }
 
   /* The Close Button */
+/* TODO: Close button is super long for some reason? */
 .addButtonClose {
     color: #aaa;
     float: right;
