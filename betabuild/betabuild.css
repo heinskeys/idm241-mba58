@@ -1,0 +1,419 @@
+body {
+    background: linear-gradient(to bottom, #171d25, #1b2838 100%);
+    height: 100%;
+    background-size: cover;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+    margin: 25px;
+}
+
+header img {
+    height: 115px; 
+    margin-right: 10px;
+}
+
+/* FONTS / TEXT STYLING*/
+
+h1 {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+h2 {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    font-size: 100%;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #1982d0;
+}
+
+h3 {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    padding: 12px; 
+    background: linear-gradient(to bottom, #22394b, #22394b71 100%);
+}
+
+h4 {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 22px;
+    color: white;
+    margin: 10px 0 15px 0;
+}
+
+p {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    text-transform: uppercase;
+    color: white;
+    margin: 0px;
+}
+
+.statNormal {
+    color: #b2b8bd;
+}
+
+.statEmphasis {
+    color: #66C0F4;
+}
+
+.tag {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 200;
+    font-size: 11px;
+    color: #8f98a0;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 2px;
+    margin: 0px 3px 0px 0px;
+    padding: 2px 5px;
+    height: fit-content;
+}
+
+.addDate {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 200;
+    font-size: 11px;
+    color: #8f98a0;
+    height: fit-content;
+    align-self: end;
+}
+
+li {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    line-height: 2ch;
+}
+
+ul {
+    padding-left: 40px;
+    padding-right: 30px;
+}
+
+button {
+    font-family: motiva-sans, sans-serif;
+    text-shadow: 1px 1px 0px rgba( 0, 0, 0, 0.3 );
+    font-weight: 200;
+    font-style: normal;
+    font-size: 15px;
+    color: white;
+}
+
+.gameInfo {
+    font-family: motiva-sans, sans-serif;
+    font-weight: 200;
+    font-style: normal;
+    font-size: 12px;
+}
+
+/* CLASS STYLING*/
+
+.wishlistItem {
+    display: flex;
+    width: 100%;
+    max-width: 940px;
+    flex-wrap: wrap; 
+    justify-content: center;
+    padding: 16px 16px 8px 16px;
+    margin: 16px auto;
+    background-color: rgba(64, 81, 99, 0.9);
+    overflow: hidden;
+}
+
+.gameRank {
+    display: flex;
+    align-items: center;
+    margin-right: 15px;
+    width: 50px;
+    height: 100%;
+    border-right: 1px solid rgba(0,0,0,0.2);
+}
+
+.orderInput {
+    width: 20px;
+}
+
+.imageContainer {
+    margin-right: 15px;
+}
+
+.gameContent {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.centerContent {
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+}
+
+.gameInfo {
+    display: grid;
+    grid-template-columns: 160px auto;
+    grid-template-rows: 18px;
+    flex-grow: 1;
+}
+
+.addToCart {
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0,0,0,0.2);
+    height: 36px;
+    padding: 4px;
+}
+
+.itemPrice {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 8px;
+    height: auto;
+}
+
+.addButton {
+    background: linear-gradient(270deg, #88cc28, #75b022, #5e971d, #75b022, #88cc28);
+    background-size: 300% 100%; /* Allows for movement of the gradient */
+    border-radius: 2.5px;
+    padding: 0px 15px;
+    border: 0;
+    cursor: pointer;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.75;
+}
+
+
+.addButton:hover {
+    animation: gradientMove 70s linear infinite;
+    opacity: 1;
+}
+
+@keyframes gradientMove {
+    from {
+        background-position: 0% 0;
+    }
+    to {
+        background-position: 2000vh;
+    }
+}
+
+.bottomContent {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+
+.platformIcon {
+    margin: 0px 0px 10px 0px;
+}
+
+.bottomRow {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.tags {
+    display: flex;
+}
+
+.mainContent { 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.categoryStyle {
+    flex: 1 1 200px; 
+    margin: 10px; 
+    padding: 0;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #29465d;
+}
+
+/* MODAL */
+
+.addedModal {
+    display: none; 
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.4); 
+    justify-content: center;
+    align-items: flex-end;
+    transition: opacity 0.3s ease;
+    opacity: 0; 
+}
+
+.addedModal.show {
+    display: flex;
+    opacity: 1; 
+}
+
+.addedModalContent {
+    box-shadow: 0px 8px 38px 5px rgba(0,0,0,.75);
+    background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%),#25282e;
+    margin: 10rem 10rem 15rem 10rem; 
+    padding: 20px;
+    width: 80%; 
+    position: relative;
+    transform: translateY(100%); 
+    transition: transform 0.3s ease; 
+}
+
+.addedModal.show .addedModalContent {
+    transform: translateY(0);
+}
+
+
+.addedModalContent p {
+    font-family: motiva-sans, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 22px;
+    text-transform: none;
+    margin: 10px 0px 25px 0px;
+}
+
+.topBar {
+    position: absolute;
+    height: 1px;
+    width: 100%; 
+    background: linear-gradient(to right, #00ccff, #3366ff); 
+    margin-bottom: 10px;
+    top: 0;
+    left: 0;
+}
+
+.addToCart .addButton span {
+    display: inline;
+}
+
+.addToCart img {
+    display: none;
+}
+
+  /* The Close Button */
+.addButtonClose {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    bottom: 10px;
+}
+
+.addButtonClose:hover,
+.addButtonClose:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.shoppingButtons {
+    display: flex;
+    flex-direction: row;
+    font-family: "motiva-sans", sans-serif;
+    font-style: normal;
+    font-size: 14px;
+    text-align: center;
+}
+
+.shopping {
+    padding: 0;
+    margin: 5px 10px 5px 10px;
+    display: block;
+    line-height: 38px;
+    color: #dfe3e6;
+    font-size: 14px;
+    text-align: center;
+    border-radius: 2px;
+    cursor: pointer;
+    width: 100%;
+    border: 0;
+    background: #3d4450;
+}
+
+.viewCartButton {
+    background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
+    background-position: 0%;
+    background-size: 330% 100%;
+}
+
+/* QUERY */
+
+@media screen and (max-width: 768px) {
+
+    .wishlistItem {
+        overflow: hidden;
+        width: auto;
+    }
+
+    .centerContent {
+        flex-direction: column;
+    }
+
+    .hide {
+        display: none;
+    }
+
+    .bottomRow {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .addToCart {
+        align-self: flex-end;
+    }
+
+    .addToCart .addButton span {
+        display: none;
+    }
+    
+    .addToCart img {
+        display: block;
+    }
+
+    .gameInfo {
+        grid-template-columns: 120px auto;
+    }
+
+    .platformIcon {
+        margin-top: -25px;
+    }
+}
