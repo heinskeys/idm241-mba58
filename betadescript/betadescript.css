@@ -1,0 +1,120 @@
+h1 {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 1.5rem;
+    color: white;
+    margin: 0;
+}
+
+h2 {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+    text-align: center;
+    font-size: 100%;
+}
+
+a {
+    color: white;
+}
+
+a:hover {
+    color: #1982d0;
+}
+
+h3 {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;
+    margin: 0;
+    padding: 12px; 
+    background: linear-gradient(to bottom, #22394b, #22394b71 100%);
+}
+
+li {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    line-height: 2ch;
+}
+
+ul {
+    padding-left: 40px;
+    padding-right: 30px;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; 
+    gap: 10px;
+    margin: 25px;
+}
+
+header img {
+    height: 115px; 
+    margin-right: 10px;
+}
+
+body {
+    background: linear-gradient(to bottom, #171d25, #1b2838 100%);
+    height: 100%;
+    background-size: cover;
+}
+
+video {
+    height: 350px;
+}
+
+.mainContent { 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.categoryStyle {
+    flex: 1 1 200px; 
+    margin: 10px; 
+    padding: 0;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #29465d;
+}
+
+.linkStyling {
+    padding: 1rem;
+    margin: 10px;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #29465d;
+    background: linear-gradient(to bottom, #22394b, #22394b71 100%);
+}
+
+.videoStyling {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    margin: 10px;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #29465d;
+    background: linear-gradient(to bottom, #22394b, #22394b71 100%);
+}
+
+@media (max-width: 768px) {
+    .mainContent {
+        flex-direction: column; 
+    }
+
+    video {
+        height: 150px;
+    }
+}
