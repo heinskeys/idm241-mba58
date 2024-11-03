@@ -1,8 +1,14 @@
+
+/* *MAIN CSS (So, the stuff that always stays.) */
+
+/* !BG STYLING */
 body {
     background: linear-gradient(to bottom, #171d25, #1b2838 100%);
     height: 100%;
     background-size: cover;
 }
+
+/* !HEADER STYLING */
 
 header {
     display: flex;
@@ -18,6 +24,24 @@ header img {
     height: 115px; 
     margin-right: 10px;
 }
+
+/* !MAIN CONTENT */
+
+.mainContent { 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.categoryStyle {
+    flex: 1 1 200px; 
+    margin: 10px; 
+    padding: 0;
+    border-style: solid;
+    border-width: 2.5px;
+    border-color: #29465d;
+}
+
 
 /* FONTS / TEXT STYLING*/
 
@@ -134,7 +158,16 @@ button {
     font-size: 12px;
 }
 
-/* CLASS STYLING*/
+.addedModalContent p {
+    font-family: motiva-sans, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 22px;
+    text-transform: none;
+    margin: 10px 0px 25px 0px;
+}
+
+/* !WISHLIST ITEM STYLING*/
 
 .wishlistItem {
     display: flex;
@@ -147,6 +180,8 @@ button {
     background-color: rgba(64, 81, 99, 0.9);
     overflow: hidden;
 }
+
+/* !WISHLIST ITEM RANK */
 
 .gameRank {
     display: flex;
@@ -161,15 +196,20 @@ button {
     width: 20px;
 }
 
+/* !WISHLIST ITEM IMAGE */
+
 .imageContainer {
     margin-right: 15px;
 }
 
+/* !WISHLIST ITEM CONTENT */
 .gameContent {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
 }
+
+/* !CENTER POSITION CONTENT */
 
 .centerContent {
     display: flex;
@@ -184,12 +224,22 @@ button {
     flex-grow: 1;
 }
 
+/* *ADD TO CART BUTTON */
+
 .addToCart {
     display: flex;
     flex-direction: row;
     background-color: rgba(0,0,0,0.2);
     height: 36px;
     padding: 4px;
+}
+
+.addToCart .addButton span {
+    display: inline;
+}
+
+.addToCart img {
+    display: none;
 }
 
 .itemPrice {
@@ -212,7 +262,6 @@ button {
     opacity: 0.75;
 }
 
-
 .addButton:hover {
     animation: gradientMove 70s linear infinite;
     opacity: 1;
@@ -226,6 +275,8 @@ button {
         background-position: 2000vh;
     }
 }
+
+/* !BOTTOM POSITION CONTENT */
 
 .bottomContent {
     display: flex;
@@ -247,22 +298,9 @@ button {
     display: flex;
 }
 
-.mainContent { 
-    display: flex; 
-    flex-wrap: wrap;
-    justify-content: space-between;
-}
+/* *ADDED TO CART POP-UP MODAL */
 
-.categoryStyle {
-    flex: 1 1 200px; 
-    margin: 10px; 
-    padding: 0;
-    border-style: solid;
-    border-width: 2.5px;
-    border-color: #29465d;
-}
-
-/* MODAL */
+/* MODAL STYLING */
 
 .addedModal {
     display: none; 
@@ -298,15 +336,7 @@ button {
     transform: translateY(0);
 }
 
-
-.addedModalContent p {
-    font-family: motiva-sans, sans-serif;
-    font-weight: 800;
-    font-style: normal;
-    font-size: 22px;
-    text-transform: none;
-    margin: 10px 0px 25px 0px;
-}
+/* !MODAL CONTENT */
 
 .topBar {
     position: absolute;
@@ -318,15 +348,7 @@ button {
     left: 0;
 }
 
-.addToCart .addButton span {
-    display: inline;
-}
-
-.addToCart img {
-    display: none;
-}
-
-  /* The Close Button */
+/* *CLOSE BUTTON */
 /* TODO: Close button is super long for some reason? */
 .addButtonClose {
     color: #aaa;
@@ -346,7 +368,7 @@ button {
     cursor: pointer;
 }
 
-
+/* *GAME INFO */
 .gamePanel {
     display: flex;
     flex-direction: row;
@@ -381,14 +403,26 @@ button {
     font-size: 16px;
 }
 
+.bottomCart {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
 .accountDropdown {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    border-radius: 3px;
+    box-shadow: inset 0px 0px 0px #0000;
+    background-color: rgba(59,63,72,.5);
 }
 .dropdown {
+    display: flex;
     width: 20px;
     height: 20px;
+    fill: #189cff;
 }
 
 .addRemoveButton {
@@ -400,14 +434,7 @@ button {
     padding: 2px 5px;
 }
 
-.bottomCart {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    
-}
-
+/* *SHOPPING BUTTONS */
 .shoppingButtons {
     display: flex;
     flex-direction: row;
@@ -438,7 +465,8 @@ button {
     background-size: 330% 100%;
 }
 
-/* QUERY */
+
+/* !MEDIA QUERIES */
 
 @media screen and (max-width: 768px) {
 
