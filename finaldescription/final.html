@@ -77,8 +77,21 @@
             <h4>Tag Buttons</h4>
             <ul>
                 <li>Hover ON</li>
+                    <ul>
+                        <li>Cursor changes to pointer</li>
+                        <li>Tag button size increase by 15%</li>
+                        <li>Tag button background color changes to #333</li>
+                    </ul>
                 <li>Hover OFF</li>
+                    <ul>
+                        <li>Cursor changes back into arrow</li>
+                        <li>Tag button size decreases by 15%</li>
+                        <li>Tag button background color changes back to #222</li>
+                    </ul>
                 <li>On Click</li>
+                    <ul>
+                        <li>Tag category page opens in new tab</li>
+                    </ul>
             </ul>
             <h4>Add to Cart Button (Wishlist)</h4>
             <ul>
@@ -119,20 +132,85 @@
                         <li>"Added to your cart!" confirmation modal eases downwards for 300 milliseconds</li>
                     </ul>
             </ul>
+            <h4>View Cart Button</h4>
+            <ul>
+                <li>Hover ON</li>
+                    <ul>
+                        <li>Cursor changes to pointer</li>
+                        <li>"View Cart" button opacity increases to 100%</li>
+                        <li>Button background gradient animates in seamless loop</li>
+                    </ul>
+                <li>Hover OFF</li>
+                    <ul>
+                        <li>Cursor changes to pointer</li>
+                        <li>"View Cart" button opacity decreases back to 75%</li>
+                        <li>Button background gradient becomes static</li>
+                    </ul>
+                <li>Mouse Down</li>
+                    <ul>
+                        <li>Button increases in size by 8%</li>
+                    </ul>
+                <li>Mouse Up</li>
+                    <ul>
+                        <li>Button decreases in size by 8%</li>
+                        <li>User cart pages opens up in new tab</li>
+                    </ul>
+            </ul>
         </div>
         <div class="categoryStyle">
             <h3>Feedback</h3>
+            <h4>Game Rank Field</h4>
+            <ul>
+                <li>Hover ON</li>
+                    <ul>
+                        <li>Bacground increases in opacity to 100%</li>
+                        <li>Cursor change into move icon</li>
+                        <li>Tooltip appears</li>
+                    </ul>
+                <li>Hover OFF</li>
+                    <ul>
+                        <li>Background decreases in opacity to 75%</li>
+                        <li>Cursor changes back into arrow</li>
+                        <li>Tooltip disappears</li>
+                    </ul>
+                <li>On Click</li>
+                    <ul>
+                        <li>Game Rank Field becomes editable</li>
+                        <li>Game Rank Field border changes to blue</li>
+                        <li>Game Rank Field text color changes to black</li>
+                        <li>Tooltip disappears</li>
+                    </ul>
+            </ul>
+            <h4>Tag Buttons</h4>
+            <ul>
+                <li>Hover ON</li>
+                    <ul>
+                        <li>Cursor changes to pointer</li>
+                        <li>Tag button size increase by 15%</li>
+                        <li>Tag button background color changes to #333</li>
+                    </ul>
+                <li>Hover OFF</li>
+                    <ul>
+                        <li>Cursor changes back into arrow</li>
+                        <li>Tag button size decreases by 15%</li>
+                        <li>Tag button background color changes back to #222</li>
+                    </ul>
+                <li>On Click</li>
+                    <ul>
+                        <li>Tag category page opens in new tab</li>
+                    </ul>
+            </ul>
             <h4>Add to Cart Button (Wishlist)</h4>
             <ul>
                 <li>Hover ON</li>
                     <ul>
-                        <li>Cursor changes to finger</li>
-                        <li>Button opacity increases to 100%</li>
+                        <li>Cursor changes to pointer</li>
+                        <li>"Add to Cart" button opacity increases to 100%</li>
                         <li>Button background gradient animates in seamless loop</li>
                     </ul>
                 <li>Hover OFF (Add to Cart Default) </li>
                     <ul>
-                        <li>Cursor changes back into pointer</li>
+                        <li>Cursor changes back into arrow</li>
                         <li>Button opacity decreases back to 75%</li>
                         <li>Button background gradient becomes static</li>
                     </ul>
@@ -140,6 +218,8 @@
                     <ul>
                         <li>Overlay background appears at 85% opacity</li>
                         <li>"Added to your cart!" confirmation modal eases upwards for 300 milliseconds</li>
+                        <li>Set the user's cart flag to TRUE in the database</li>
+                        <li>Update the user's cart item count to 1 in the database</li>
                     </ul>
             </ul>
             <h4>Added Modal (Close Button)</h4>
@@ -159,9 +239,55 @@
                         <li>"Added to your cart!" confirmation modal eases downwards for 300 milliseconds</li>
                     </ul>
             </ul>
+            <h4>View Cart Button</h4>
+            <ul>
+                <li>Hover ON</li>
+                    <ul>
+                        <li>Cursor changes to pointer</li>
+                        <li>"View Cart" button opacity increases to 100%</li>
+                        <li>Button background gradient animates in seamless loop</li>
+                    </ul>
+                <li>Hover OFF</li>
+                    <ul>
+                        <li>Cursor changes to pointer</li>
+                        <li>"View Cart" button opacity decreases back to 75%</li>
+                        <li>Button background gradient becomes static</li>
+                    </ul>
+                <li>Mouse Down</li>
+                    <ul>
+                        <li>Button increases in size by 8%</li>
+                    </ul>
+                <li>Mouse Up</li>
+                    <ul>
+                        <li>Button decreases in size by 8%</li>
+                        <li>User cart pages opens up in new tab</li>
+                    </ul>
+            </ul>
         </div>
         <div class="categoryStyle">
             <h3>Loops &amp; Modes</h3>
+            <h4>Game Rank Field</h4>
+            <ul>
+                <li>Loops</li>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <li>Modes</li>
+                <ul>
+                    <li>None</li>
+                </ul>
+            </ul>
+            <h4>Tag Buttons</h4>
+            <ul>
+                <li>Loops</li>
+                <ul>
+                    <li>None</li>
+                </ul>
+                <li>Modes</li>
+                <ul>
+                    <li>None</li>
+                </ul>
+            </ul>
             <h4>Add to Cart Button (Wishlist)</h4>
             <ul>
                 <li>Loops</li>
@@ -178,6 +304,17 @@
                 <li>Loops</li>
                 <ul>
                     <li>None</li>
+                </ul>
+                <li>Modes</li>
+                <ul>
+                    <li>None</li>
+                </ul>
+            </ul>
+            <h4>View Cart Button</h4>
+            <ul>
+                <li>Loops</li>
+                <ul>
+                    <li>Button background gradient animates in seamless loop</li>
                 </ul>
                 <li>Modes</li>
                 <ul>
