@@ -46,7 +46,7 @@ header img {
 /* FONTS / TEXT STYLING*/
 
 h1 {
-    font-family: "motiva-sans", sans-serif;
+    font-family: motiva-sans , sans-serif;
     font-weight: 500;
     font-style: normal;
     font-size: 1.5rem;
@@ -55,7 +55,7 @@ h1 {
 }
 
 h2 {
-    font-family: "motiva-sans", sans-serif;
+    font-family: motiva-sans, sans-serif;
     font-weight: 500;
     font-style: italic;
     text-align: center;
@@ -71,7 +71,7 @@ a:hover {
 }
 
 h3 {
-    font-family: "motiva-sans", sans-serif;
+    font-family: motiva-sans , sans-serif;
     font-weight: 500;
     font-style: normal;
     text-align: center;
@@ -83,7 +83,7 @@ h3 {
 }
 
 h4 {
-    font-family: "motiva-sans", sans-serif;
+    font-family: motiva-sans , sans-serif;
     font-weight: 400;
     font-style: normal;
     font-size: 22px;
@@ -373,6 +373,16 @@ button {
     display: flex;
     flex-wrap: wrap;
     gap: 5px; 
+}
+
+.tag a {
+    font-family: "motiva-sans", sans-serif;
+    text-decoration: none;
+    color: #8f98a0;
+}
+
+.tag a:hover {
+    color: #66C0F4;
 }
 
 /* *ADDED TO CART POP-UP MODAL */
