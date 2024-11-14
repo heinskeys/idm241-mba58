@@ -193,12 +193,23 @@ button {
 
 .gameRank {
     display: flex;
+    flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-right: 15px;
-    width: 50px;
-    height: 100%;
     border-right: 1px solid rgba(0,0,0,0.2);
+    flex-grow: 1; /* Allow gameRank to take up available space */
 }
+
+.rankItems {
+    margin: 10px;
+}
+
+
+.wishlistItem > *:not(.gameRank) {
+    align-self: flex-start; /* Prevent other children from stretching */
+}
+
 
 .orderInput {
     width: 20px;
@@ -328,6 +339,8 @@ button {
     animation: gradientMove 70s linear infinite;
     opacity: 1;
 }
+
+
 
 @keyframes gradientMove {
     from {
@@ -569,15 +582,35 @@ button {
 .viewCartButton {
     background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
     background-position: 0%;
-    background-size: 330% 100%;
+    background-size: 300% 100%;
     transition: transform 0.2s ease;
+    opacity: 0.75;
 }
 
 .viewCartButton:hover {
-    cursor: pointer;
-    transform: scale(1.08);
+    animation: gradientMove 70s linear infinite;
+    opacity: 1;
 }
 
+.viewCartButton {
+    background: linear-gradient(
+        270deg,
+        #47bfff,   /* Light Blue */
+        #3694e5,   /* Medium Light Blue */
+        #285fc9,   /* Medium Blue */
+        #3694e5,   /* Medium Light Blue */
+        #47bfff    /* Light Blue */
+    );
+    background-size: 300% 100%;
+    cursor: pointer;
+    transition: color 0.3s ease, opacity 0.3s ease;
+    opacity: 0.75;
+}
+
+.viewCartButton:hover {
+    animation: gradientMove 70s linear infinite;
+    opacity: 1;
+}
 
 /* !MEDIA QUERIES */
 
