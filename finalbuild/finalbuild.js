@@ -1,63 +1,73 @@
 // !Modal base code from W3Schools.
 // *Modal JS
 
-var addToCartButton = document.getElementById('addtocartButton');
-var modal = document.getElementById('addedModal');
-var closeButton = modal.querySelector('.addButtonClose');
+// Select all 'Add to Cart' buttons
+var addToCartButtons = document.querySelectorAll('.addButton');
 
-addToCartButton.addEventListener('click', function() {
-    modal.style.display = 'flex';
-    requestAnimationFrame(() => {
-        modal.classList.add('show');
+// Iterate over each button
+addToCartButtons.forEach(function(addToCartButton) {
+    // Get the associated modal for this specific button
+    var modal = addToCartButton.closest('.gameContent').querySelector('.addedModal');
+    var closeButton = modal.querySelector('.addButtonClose');
+
+    // Show the modal when the add to cart button is clicked
+    addToCartButton.addEventListener('click', function() {
+        console.log('Add to Cart button clicked!');
+        modal.style.display = 'flex'; // Show the modal
+        requestAnimationFrame(() => {
+            modal.classList.add('show'); // Add the 'show' class for animation
+        });
+    });
+
+    // Close the modal when close button is clicked
+    closeButton.addEventListener('click', function() {
+        console.log('Close button clicked!');
+        modal.classList.remove('show'); // Hide the modal with animation
+        setTimeout(() => {
+            modal.style.display = 'none'; // Set display to none after animation
+        }, 300);
+    });
+
+    // Select the 'View Cart' and 'Continue Shopping' buttons inside the modal
+    var viewButton = modal.querySelector('.viewCartButton');
+    var continueButton = modal.querySelector('.continueButton');
+
+    // Add a mousedown event to increase the size for the viewCartButton
+    viewButton.addEventListener('mousedown', function() {
+        console.log('View Cart button pressed!');
+        viewButton.style.transform = 'scale(1.08)'; // Increase size
+    });
+
+    // Add a mouseup event to reset the size and open the cart link
+    viewButton.addEventListener('mouseup', function() {
+        console.log('View Cart button released!');
+        viewButton.style.transform = 'scale(1)'; // Reset size
+        window.open('https://store.steampowered.com/cart', '_blank'); // Open cart in new tab
+    });
+
+    // Reset the size if mouse leaves
+    viewButton.addEventListener('mouseleave', function() {
+        viewButton.style.transform = 'scale(1)';
+    });
+
+    // Add a mousedown event to increase the size for the continueButton
+    continueButton.addEventListener('mousedown', function() {
+        console.log('Continue Shopping button pressed!');
+        continueButton.style.transform = 'scale(1.08)'; // Increase size
+    });
+
+    // Add a mouseup event to reset the size and close the modal
+    continueButton.addEventListener('mouseup', function() {
+        console.log('Continue Shopping button released!');
+        continueButton.style.transform = 'scale(1)'; // Reset size
+        modal.classList.remove('show'); // Close modal
+        setTimeout(() => {
+            modal.style.display = 'none'; // Set display to none after animation
+        }, 300);
+    });
+
+    // Reset the size if mouse leaves
+    continueButton.addEventListener('mouseleave', function() {
+        continueButton.style.transform = 'scale(1)';
     });
 });
-
-closeButton.addEventListener('click', function() {
-    modal.classList.remove('show');
-    setTimeout(() => {
-        modal.style.display = 'none';
-    }, 300);
-});
-
-var viewButton = document.querySelector('.viewCartButton');
-
-// Add a mousedown event to increase the size
-viewButton.addEventListener('mousedown', function() {
-    viewButton.style.transform = 'scale(1.08)'; // Increase size when mouse is pressed down
-});
-
-// Add a mouseup event to decrease the size and navigate to the cart
-viewButton.addEventListener('mouseup', function() {
-    viewButton.style.transform = 'scale(1)'; // Reset size when mouse is released
-    window.open('https://store.steampowered.com/cart', '_blank') // Redirect to the cart page
-});
-
-viewButton.addEventListener('mouseleave', function() {
-    viewButton.style.transform = 'scale(1)';
-});
-
-var continueButton = document.querySelector('.continueButton');
-
-// Add a mousedown event to increase the size
-continueButton.addEventListener('mousedown', function() {
-    continueButton.style.transform = 'scale(1.08)'; // Increase size when mouse is pressed down
-});
-
-// Add a mouseup event to decrease the size and navigate to the cart
-continueButton.addEventListener('mouseup', function() {
-    continueButton.style.transform = 'scale(1)'; // Reset size when mouse is released
-    modal.classList.remove('show');
-    setTimeout(() => {
-        modal.style.display = 'none';
-    }, 300);
-});
-
-continueButton.addEventListener('mouseleave', function() {
-    continueButton.style.transform = 'scale(1)';
-});
-
-
-
-
-
-
