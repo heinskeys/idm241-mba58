@@ -261,6 +261,7 @@ button {
     background: #c2c2c2;
     color: #3d3d3f;
     font-size: 11px;
+    text-transform: none;
     border-radius: 3px;
     padding: 5px;
     max-width: 275px;
@@ -401,36 +402,36 @@ button {
 /* MODAL STYLING */
 
 .addedModal {
-    display: none; 
-    position: fixed; 
+    display: none;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.4); 
+    background-color: rgba(0, 0, 0, 0.4);
     justify-content: center;
     align-items: flex-end;
     transition: opacity 0.3s ease;
-    opacity: 0; 
+    opacity: 0;
 }
 
 .addedModal.show {
     display: flex;
-    opacity: 1; 
+    opacity: 1;
 }
 
 .addedModalContent {
-    box-shadow: 0px 8px 38px 5px rgba(0,0,0,.75);
-    background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%),#25282e;
-    margin: 10rem 0 10rem 0; 
+    box-shadow: 0px 8px 38px 5px rgba(0, 0, 0, .75);
+    background: radial-gradient(circle at top left, rgba(74, 81, 92, 0.4) 0%, rgba(75, 81, 92, 0) 60%), #25282e;
+    margin: 10rem 0 10rem 0;
     padding: 24px;
     height: 297px;
     width: 648px;
     max-width: 90vw;
     max-height: 90vh;
     position: relative;
-    transform: translateY(100%); 
-    transition: transform 0.3s ease; 
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
 }
 
 .addedModal.show .addedModalContent {
@@ -544,15 +545,15 @@ button {
     align-items: center;
     
 }
-
 .accountDropdown {
     display: flex;
     flex-direction: row;
+    align-items: center;
     border-radius: 3px;
     box-shadow: inset 0px 0px 0px #0000;
     background-color: rgba(59,63,72,.5);
     font-size: 13px;
-    padding: 5px 24px 5px 7px;
+    padding: 2px 7px 2px 7px;
     color: #dfe3e6;
     font-weight: 300;
     margin-top: 8px;
@@ -560,10 +561,12 @@ button {
 }
 .dropdown {
     display: flex;
-    width: 20px;
-    height: 20px;
+    align-items: center;
+    width: 28px;
+    height: 28px;
     fill: #189cff;
 }
+
 
 .addRemoveButton {
     font-family: "motiva-sans", sans-serif;
@@ -572,6 +575,10 @@ button {
     color: #8f98a0;
     margin: 0px 3px 0px 0px;
     padding: 2px 5px;
+}
+
+.removeSpecial {
+    text-decoration: underline dotted;
 }
 
 /* *SHOPPING BUTTONS */
@@ -600,27 +607,23 @@ button {
     background: #3d4450;
 }
 
-.viewCartButton {
-    background: linear-gradient(to right, #47bfff 0%, #1a44c2 60%);
-    background-position: 0%;
-    background-size: 300% 100%;
-    transition: transform 0.2s ease;
+.continueButton {
+    transition: opacity 0.3s ease;
     opacity: 0.75;
 }
 
-.viewCartButton:hover {
-    animation: gradientMove 70s linear infinite;
+.continueButton:hover {
     opacity: 1;
 }
 
 .viewCartButton {
     background: linear-gradient(
         270deg,
-        #47bfff,   /* Light Blue */
-        #3694e5,   /* Medium Light Blue */
-        #285fc9,   /* Medium Blue */
-        #3694e5,   /* Medium Light Blue */
-        #47bfff    /* Light Blue */
+        #3aa5e0,   /* Darker Light Blue */
+        #2578c1,   /* Darker Medium Light Blue */
+        #1d4fa3,   /* Darker Medium Blue */
+        #2578c1,   /* Darker Medium Light Blue */
+        #3aa5e0    /* Darker Light Blue */
     );
     background-size: 300% 100%;
     cursor: pointer;
@@ -633,7 +636,26 @@ button {
     opacity: 1;
 }
 
+
+
 /* !MEDIA QUERIES */
+
+@media screen and (max-width: 1024px) {
+    .wishlistItem {
+        flex-direction: row; /* Make items appear side by side on tablets */
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+
+    .imageContainer {
+        width: 40%; /* Adjust the image container width */
+        margin-bottom: 0; /* Remove bottom margin to align horizontally */
+    }
+
+    .gameContent {
+        width: 55%; /* Adjust the game content width */
+    }
+}
 
 @media screen and (max-width: 768px) {
 
@@ -682,5 +704,45 @@ button {
         padding: 15px;
         background-color: rgba(0, 0, 0, .25);
         align-items: center;
+    }
+
+    .addedModalContent {
+        margin: 4rem 0 4rem 0;
+        height: auto;
+        max-width: 95vw;
+    }
+
+    .shoppingButtons {
+        align-items: center;
+        gap: 10px;
+        margin-top: 10px;
+    }
+
+    .shopping {
+        width: 100%;
+        padding: 12px 0;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .modalImage {
+        width: 80%; /* Image spans the width of the game panel */
+        height: auto; 
+    }
+
+    .gamePanel {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cartInfo {
+        width: 80%; /* Make cartInfo span full width */
+        margin-left: 0;
+        flex-grow: 1;
+    }
+
+    .cartPrice {
+        font-size: 18px;
+        margin-top: 8px;
     }
 }
