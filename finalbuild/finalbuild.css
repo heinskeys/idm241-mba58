@@ -115,8 +115,15 @@ p {
     color: #b2b8bd;
 }
 
+.statEmphasisPos {
+    color: #88cc28;
+}
 .statEmphasis {
     color: #66C0F4;
+}
+
+.statEmphasisNeg {
+    color: #F46666;
 }
 
 .tag {
@@ -258,8 +265,8 @@ button {
 .tooltip .tooltiptext {
     visibility: hidden;
     width: 200px;
-    background: #c2c2c2;
-    color: #3d3d3f;
+    background: #171d25;
+    color: #e4e4e4;
     font-size: 11px;
     text-transform: none;
     border-radius: 3px;
