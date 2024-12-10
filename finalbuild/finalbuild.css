@@ -111,6 +111,20 @@ p {
     margin: 0px;
 }
 
+.case-study {
+    font-family: "motiva-sans", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-transform: none;
+    color: white;
+    margin: 0px;
+    line-height: 2ch;
+    padding: 2px 6rem;
+}
+
+.case-study p {
+    text-transform: none;
+}
 .statNormal {
     color: #b2b8bd;
 }
