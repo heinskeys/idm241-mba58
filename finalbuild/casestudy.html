@@ -4,59 +4,102 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.typekit.net/uyh1pvm.css">
-    <link rel="stylesheet" href="finalbuild.css">
+    <link rel="stylesheet" href="casestudy.css">
     <title>Case Study</title>
 </head>
-<body class="case-study">
-    <h3>Overview</h3>
-    <p>This project is a microinteraction design to improve the Steam Wishlist tile, created for IDM 241: Microinteraction Design under the guidance of Professor Jervis Thompson. Over 10 weeks, I brainstormed, designed, and developed three builds, each adding new interactions and refining the visual style. Steam's current interface offers minimal feedback, often limited to state changes like transitioning to a new page. My goal was to add subtle microinteractions that fit within Steam’s branding while making the interface more visually engaging and intuitive. The final build includes five integrated microinteractions, with detailed descriptions of their triggers, rules, feedback, and loops. This was a solo project with class and instructor support.</p>
+<body>
+    <header>
+        <img src="files/Steam Logo Full white.svg" alt="">
+        <h1> CASE STUDY</h1>
+    </header>
 
-    <h3>Context and Challenge</h3>
+    <section>
+        <h2>Overview</h2>
+        <p>
+            This class project focused on designing an interactive and engaging set of microinteractions to enhance the usability 
+            and visual appeal of the Steam Wishlist tile. The goal was to modernize Steam's interface while staying true to its 
+            established brand, incorporating subtle interactions to improve the user experience. The final build includes five 
+            integrated microinteractions, with detailed descriptions of their triggers, rules, feedback, and loops. These 
+            interactions successfully demonstrated my ability to blend thoughtful design with technical execution, resulting in a 
+            dynamic and polished redesign.
+        </p>
+    </section>
 
-    <h3>Background / Description / Timeline / Purpose</h3>
-    <p>Steam has a distinct branding style but lacks depth in microinteractions, such as hover effects or animations, to engage users beyond basic state changes. This project, developed over 10 weeks, focused on reimagining the Wishlist tile to be more visually interesting and user-friendly without compromising Steam’s established aesthetic or overwhelming the user.</p>
+    <section>
+        <h2>Context and Background</h2>
+        <div class="videoStyling">
+            <video controls>
+                <source src="files/realsteam.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <p>
+            Over the course of 10 weeks, I worked independently to create a series of microinteractions that would make the Steam 
+            Wishlist tile feel more alive and engaging while adhering to Steam's more rigid UI structure. Steam's interface is 
+            functional but lacks the visual feedback that can make user interactions more intuitive and satisfying. For example, 
+            clicking a button typically results in a simple state change, such as visiting a new page, with no transitional animations 
+            or hover effects.
+        </p>
+        <p>
+            I wanted to design microinteractions that felt seamless and on-brand, enhancing the usability of the Wishlist tile without 
+            overwhelming or frustrating users. Steam is an ecommerce platform, so while there was a lot of potential for really cool 
+            interactions, I didn’t want them to become cumbersome over time for users. I also wanted to ensure my interactions felt 
+            consistent across elements, balancing subtlety with engagement, and I solved technical challenges related to replicating 
+            Steam's precise UI styles.
+        </p>
+    </section>
 
-    <h3>The Problem</h3>
-    <p>When interacting with Steam, users rarely encounter microinteractions—there is little feedback beyond state changes, such as visiting a new page. This creates a utilitarian but uninspired experience. I aimed to redesign the Wishlist tile by adding subtle, brand-aligned animations and interactions to improve usability and visual appeal.</p>
+    <section>
+        <h2>Process and Insights</h2>
+        <p>
+            I started by analyzing Steam’s branding and existing interactions to identify opportunities for improvement. Steam’s 
+            audience values straightforward, functional interfaces, so I prioritized microinteractions that would enhance the user 
+            experience without disrupting the platform’s simplicity. So, what changes would add visual interest without taking over? 
+            How could I integrate some of the interesting interactions and features Steam already has, like its robust rating system 
+            and color palette to enhance the Wishlist tile?
+        </p>
+        <p>
+            The project evolved through three stages: Alpha, Beta, and Final builds.
+        </p>
+        <ul>
+            <li><strong>Alpha Build:</strong> I primarily focused on replicating Steam’s UI elements and brainstorming initial interaction concepts.</li>
+            <li><strong>Beta Build:</strong> Introduced key animations like gradient loops, scaling effects, and tooltip enhancements, refining their implementation with each iteration.</li>
+            <li><strong>Final Build:</strong> Polished all interactions, ensuring consistency across elements and solving technical challenges like tooltip clipping and modal alignment.</li>
+        </ul>
+        <p>
+            In each build, I worked to make changes feel seamless and well-integrated with one another. A major part of my process was 
+            ensuring consistency across all microinteractions. For example, if a button press behaved a certain way on one page, it 
+            had to follow the same behavior on another page.
+        </p>
+    </section>
 
-    <h3>Goals & Objectives</h3>
-    <p>1. Redesign the Wishlist tile with microinteractions that align with Steam’s branding.</p>
-    <p>2. Make interactions engaging but seamless and nonintrusive.</p>
-    <p>3. Ensure consistency across all interactions within the tile.</p>
-    <p>This was a solo project, allowing me to explore coding techniques and develop a unique solution while adhering to Steam's rigid brand style.</p>
+    <section>
+        <h2>Solution</h2>
+        <p>
+            Ultimately, I added around 5–6 microinteractions that integrated seamlessly into Steam while making the experience feel 
+            more dynamic and engaging for users. Here’s a breakdown of some key changes:
+        </p>
+        <div class="videoStyling">
+            <video controls>
+                <source src="files/finalbuildvidreal.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <ul>
+            <li><strong>Add to Cart Button:</strong> I added an animation where, when users hover over the "Add to Cart" button, a gradient loop plays endlessly until they hover off or press the button. When the button is pressed, it scales up and then down.</li>
+            <li><strong>Pop-Up Modal Animation:</strong> Upon pressing the "Add to Cart" button, the modal now flies up instead of simply appearing. Buttons within the modal, like "Continue Shopping" and "Checkout," also feature gradient loops and scaling when clicked.</li>
+            <li><strong>Rating Tooltip:</strong> On the Wishlist tile, Steam includes a tooltip explaining the game’s rating (e.g., "Overwhelmingly Positive" or "Overwhelmingly Negative"). I made this tooltip more visually distinct by darkening the background and color-coding the ratings for easier distinction.</li>
+            <li><strong>Game Tags:</strong> Steam has a robust tagging system for games, which I wanted to highlight. Now, when users hover over a tag, it pops up, changes color, and features scaling when clicked.</li>
+        </ul>
+        <p>
+            By making these changes, I achieved my goal of seamless integration. These updates don’t drastically change the interface 
+            but make it feel more interactive.
+        </p>
 
-    <h3>Process and Insight</h3>
-
-    <h3>Research and Ideation</h3>
-    <p>I began by focusing on Steam’s branding to ensure my changes felt authentic and well-integrated. Steam’s user base values functionality, so I wanted to avoid overcomplicating interactions. My process centered on identifying where subtle changes, like hover effects or animations, could enhance usability without detracting from the platform's simplicity.</p>
-
-    <h3>Design and Development</h3>
-    <p><strong>1. Initial Build (Alpha)</strong><br>
-    Focused on replicating Steam’s interface, particularly its rigid sizing and layout conventions. Explored subtle hover animations and state transitions as initial concepts.</p>
-
-    <p><strong>2. Midway Build (Beta)</strong><br>
-    Introduced gradient loops, button scaling, and enhanced tooltips. Addressed challenges in recreating Steam’s modal system, balancing flexibility with accurate sizing.</p>
-
-    <p><strong>3. Final Build</strong><br>
-    Created a cohesive interaction ecosystem. Used Grid layout for precise alignment, ensuring flexibility and adherence to Steam’s hierarchy. Finalized five key microinteractions to bring the Wishlist tile to life.</p>
-
-    <h3>Key Microinteractions</h3>
-    <p><strong>Add-to-Cart Button:</strong> On hover, a gradient loop plays continuously until the button is pressed, scaling up and down for feedback.</p>
-    <p><strong>Pop-Up Modal:</strong> The modal now animates upward when triggered, with gradient loops and scaling effects on buttons.</p>
-    <p><strong>Game Ratings Tooltip:</strong> Enhanced Steam’s unique rating system by color-coding the text and darkening the tooltip background for better visibility.</p>
-    <p><strong>Tags:</strong> Steam’s robust tagging system now features hover effects that include text scaling, color changes, and dynamic feedback.</p>
-    <p><strong>Seamless Transitions:</strong> Ensured all interactions maintained a consistent, unified design language.</p>
-
-    <h3>Solution</h3>
-    <p>The final Wishlist tile design features microinteractions that integrate seamlessly into Steam’s interface, balancing subtle feedback with brand authenticity. By enhancing visual elements like buttons, tooltips, and tags, the redesign creates a more interactive experience while respecting Steam’s core aesthetic.</p>
-    <p>Specific features include:</p>
-    <p>1. Dynamic Visual Feedback: Gradient animations, color changes, and scaling effects.</p>
-    <p>2. Interactive Tooltips: Enhanced readability and visibility of Steam’s unique rating system.</p>
-    <p>3. Consistency Across Elements: Unified styles across buttons, pop-ups, and hover states to ensure a cohesive user experience.</p>
-
-    <h3>Results</h3>
-    <p>The final project meets the goal of creating an engaging, brand-consistent Wishlist tile, proving that subtle, thoughtful microinteractions can enhance user engagement without overwhelming the interface.</p>
-    <p><strong>Link to Code:</strong> <a href="YOUR_LINK_HERE">Insert Link Here</a></p>
+        <button class="button">
+            <a class="buttonText" href="finalbuild.html">Final Build</a>
+        </button>
+    </section>
 
 </body>
 </html>
