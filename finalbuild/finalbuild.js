@@ -1,73 +1,73 @@
-// !Modal base code from W3Schools.
-// *Modal JS
+// *Added to Cart modal
+// Each wishlist item has its own modal. Animation is handled entirely in CSS
+// by toggling the 'show' class — JS just manages state and focus.
 
-// Select all 'Add to Cart' buttons
-var addToCartButtons = document.querySelectorAll('.addButton');
+const CART_URL = 'https://store.steampowered.com/cart';
 
-// Iterate over each button
-addToCartButtons.forEach(function(addToCartButton) {
-    // Get the associated modal for this specific button
-    var modal = addToCartButton.closest('.gameContent').querySelector('.addedModal');
-    var closeButton = modal.querySelector('.addButtonClose');
+let openModal = null;
+let lastTrigger = null;
 
-    // Show the modal when the add to cart button is clicked
-    addToCartButton.addEventListener('click', function() {
-        console.log('Add to Cart button clicked!');
-        modal.style.display = 'flex'; // Show the modal
-        requestAnimationFrame(() => {
-            modal.classList.add('show'); // Add the 'show' class for animation
-        });
+function showModal(modal, trigger) {
+    openModal = modal;
+    lastTrigger = trigger;
+    modal.classList.add('show');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('modalOpen');
+    modal.querySelector('.addButtonClose').focus({ preventScroll: true });
+}
+
+function hideModal() {
+    if (!openModal) return;
+    openModal.classList.remove('show');
+    openModal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('modalOpen');
+    // Return focus to the button that opened the modal
+    if (lastTrigger) lastTrigger.focus({ preventScroll: true });
+    openModal = null;
+}
+
+document.querySelectorAll('.wishlistItem').forEach(function(item) {
+    const addButton = item.querySelector('.addButton');
+    const modal = item.querySelector('.addedModal');
+
+    addButton.addEventListener('click', function() {
+        showModal(modal, addButton);
     });
 
-    // Close the modal when close button is clicked
-    closeButton.addEventListener('click', function() {
-        console.log('Close button clicked!');
-        modal.classList.remove('show'); // Hide the modal with animation
-        setTimeout(() => {
-            modal.style.display = 'none'; // Set display to none after animation
-        }, 300);
+    modal.querySelector('.addButtonClose').addEventListener('click', hideModal);
+    modal.querySelector('.continueButton').addEventListener('click', hideModal);
+
+    // Grow-on-press is CSS (:active); click fires on mouse up
+    modal.querySelector('.viewCartButton').addEventListener('click', function() {
+        window.open(CART_URL, '_blank', 'noopener');
     });
 
-    // Select the 'View Cart' and 'Continue Shopping' buttons inside the modal
-    var viewButton = modal.querySelector('.viewCartButton');
-    var continueButton = modal.querySelector('.continueButton');
-
-    // Add a mousedown event to increase the size for the viewCartButton
-    viewButton.addEventListener('mousedown', function() {
-        console.log('View Cart button pressed!');
-        viewButton.style.transform = 'scale(1.08)'; // Increase size
+    // Clicking the dimmed backdrop (not the modal box itself) closes it
+    modal.addEventListener('click', function(event) {
+        if (event.target === modal) hideModal();
     });
+});
 
-    // Add a mouseup event to reset the size and open the cart link
-    viewButton.addEventListener('mouseup', function() {
-        console.log('View Cart button released!');
-        viewButton.style.transform = 'scale(1)'; // Reset size
-        window.open('https://store.steampowered.com/cart', '_blank'); // Open cart in new tab
-    });
+document.addEventListener('keydown', function(event) {
+    if (!openModal) return;
 
-    // Reset the size if mouse leaves
-    viewButton.addEventListener('mouseleave', function() {
-        viewButton.style.transform = 'scale(1)';
-    });
+    if (event.key === 'Escape') {
+        hideModal();
+        return;
+    }
 
-    // Add a mousedown event to increase the size for the continueButton
-    continueButton.addEventListener('mousedown', function() {
-        console.log('Continue Shopping button pressed!');
-        continueButton.style.transform = 'scale(1.08)'; // Increase size
-    });
+    // Keep Tab cycling inside the open modal instead of wandering behind it
+    if (event.key === 'Tab') {
+        const focusable = openModal.querySelectorAll('button');
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
 
-    // Add a mouseup event to reset the size and close the modal
-    continueButton.addEventListener('mouseup', function() {
-        console.log('Continue Shopping button released!');
-        continueButton.style.transform = 'scale(1)'; // Reset size
-        modal.classList.remove('show'); // Close modal
-        setTimeout(() => {
-            modal.style.display = 'none'; // Set display to none after animation
-        }, 300);
-    });
-
-    // Reset the size if mouse leaves
-    continueButton.addEventListener('mouseleave', function() {
-        continueButton.style.transform = 'scale(1)';
-    });
+        if (event.shiftKey && document.activeElement === first) {
+            event.preventDefault();
+            last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+            event.preventDefault();
+            first.focus();
+        }
+    }
 });
